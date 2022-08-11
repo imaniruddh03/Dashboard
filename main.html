@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <link href="https://fonts.google.com/icons?icon.style=Rounded" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link rel="stylesheet" href="./style.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['', '', ''],
+          ['2014', 1000,  200],
+          ['2015', 1170,  250],
+          ['2016', 660,  300],
+          ['2017', 1030, 350]
+        ]);
+
+        var options = {
+          chart: {
+            title: 'Activites'   
+          }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+
+
+</head>
+<body>
+    <div class="container">
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src="./formilogo_color_small 1.png">
+                </div>   
+            </div>
+            <div class="sidebar">
+                <a href="#">
+                    <span class="material-symbols-rounded">home</span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-rounded">groups</span>
+                    <h3>My Team</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-rounded"> business_center </span>
+                    <h3>Task</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-rounded">calendar_month</span>
+                    <h3>Calender</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-rounded">insights</span>
+                    <h3>Report</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-rounded">settings</span>
+                    <h3>Settings</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-rounded" style="border-radius: 8px;">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+        <main>
+            <h1 class="dash">Dashboard</h1>
+            <div class="insights">
+                <div class="work">
+                    <h6>Work</h6>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Work Tday</h3>
+                            <h2>75</h2>
+
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx='38' cy='38' r="36"></circle>
+                            </svg>
+                            <div class="number">
+                                <p>50% </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="Analytics">
+                    <h6>Analytics</h6>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Analytics Today</h3>
+                            <h2>310</h2>
+
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx='38' cy='38' r="36"></circle>
+                            </svg>
+                            <div class="number">
+                                <p>25% </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="Statistics">
+                    <h6>Statistics</h6>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Work Today</h3>
+                            <h2>75</h2>
+
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx='38' cy='38' r="36"></circle>
+                            </svg>
+                            <div class="number">
+                                <p>59% </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="Task">
+                    <h6>Task</h6>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Task Today</h3>
+                            <h2>15</h2>
+
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx='38' cy='38' r="36"></circle>
+                            </svg>
+                            <div class="number">
+                                <p>75% </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <div class="right">
+            <div class="top">
+                <button id="menu-btn">
+                    <span class="material-symbols-rounded">menu</span>
+                </button>
+                <div class="theme-toggler">
+                    <span class="material-symbols-rounded " style="color: #ED1690;">notifications</span>
+                    <span class="material-symbols-rounded" style="color: #ED1690;">search</span>
+                </div>
+                <div class="profile">
+                    <div class="class">
+                        <img src="./Ellipse 4.png" alt="" style="position: absolute;
+                        width: 42px;
+                        height: 42px;
+                        left: 1475px;
+                        top: 9px;
+                        ">
+                    </div>
+                </div>
+            </div>
+
+            <div class="recent">
+                <div id="columnchart_material" style="width: 300px; height: 350px;"></div>
+
+            </div>
+
+            <div class="team">
+                <h2>Team Performance</h2>
+                <div class="item-online">
+                    <div class="icon">
+                        <span class="material-symbols-rounded">account_circle</span>
+                    </div>
+                    <div class="right">
+                        <div class="info">
+                            <h3>Aniruddh Arun</h3>
+                            <small class="text-muted">Project Manager</small>
+                        </div>
+                        
+                        <h3>9.8</h3>
+                    </div>
+                </div>
+                <div class="item-online">
+                    <div class="icon">
+                        <span class="material-symbols-rounded">account_circle</span>
+                    </div>
+                    <div class="right">
+                        <div class="info">
+                            <h3>Samvrant</h3>
+                            <small class="text-muted">Ux Designer</small>
+                        </div>
+                        <h3>9.2</h3>
+                    </div>
+                </div>
+                <div class="item-online">
+                    <div class="icon">
+                        <span class="material-symbols-rounded">account_circle</span>
+                    </div>
+                    <div class="right">
+                        <div class="info">
+                            <h3>Aryamann</h3>
+                            <small class="text-muted">UI Designer</small>
+                        </div>
+                        <h3>9.1</h3>
+                    </div>
+                </div>
+                <div class="item-online">
+                    <div class="icon">
+                        <span class="material-symbols-rounded">account_circle</span>
+                    </div>
+                    <div class="right">
+                        <div class="info">
+                            <h3>Dhanush</h3>
+                            <small class="text-muted">Motion Designer</small>
+                        </div>
+                        <h3>8.5</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>
